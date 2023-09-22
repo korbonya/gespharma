@@ -33,7 +33,7 @@ export const getAllProducts = async (req, res) => {
 
 // Update a product by ID
 export const updateProduct = async (req, res) => {
-  const { name, description, price, stock, expirationDate, manufacturer } = req.body;
+  const { name, description, price, stock, expirationDate, manufacturer, category } = req.body;
   const productId = req.params.id;
 
   try {
@@ -46,6 +46,7 @@ export const updateProduct = async (req, res) => {
         stock,
         expirationDate,
         manufacturer,
+        category,
       },
       { new: true }
     );
