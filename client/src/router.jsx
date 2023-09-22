@@ -2,10 +2,17 @@ import {
     createBrowserRouter,
   } from "react-router-dom";
 
+  import LoginPage from "./features/auth/loginPage";
+  import DashboardPages from "./routes/dashboard";
+
 
  export const router = createBrowserRouter([
     {
       path: "/",
-      element: <div className="text-green-500 text-4xl underline">Hello world!</div>,
+      element: <LoginPage />,
     },
+    {
+        path: "/dashboard",
+        element: <DashboardPages />,
+    }
   ]);
