@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/sidebar';
 
 export default function Dashboard() {
@@ -7,7 +8,7 @@ export default function Dashboard() {
             <Sidebar />
         </div>
         <div>
-            page
+           <Outlet />
         </div>
     </div>
   )
